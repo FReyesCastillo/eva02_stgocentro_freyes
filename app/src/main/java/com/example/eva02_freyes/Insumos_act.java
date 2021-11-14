@@ -48,7 +48,7 @@ public class Insumos_act extends AppCompatActivity {
 
                 precio = in.getPrecios()[i]; // obtengo resultado del precio según índice
 
-                resultado = in.anadirAdicional(in.getPrecios()[i], 350); // obtengo regla adicional
+                resultado = in.anadirAdicional(in.getPrecios()[i], 450); // obtengo regla adicional
                 calificar.setRating(i+1); // pinta las estrellas del rating bar
                 break;
             }
