@@ -34,7 +34,7 @@ public class Redes_act extends AppCompatActivity {
     public void Github(View View){
 
         Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse("https://github.com"));
+        i.setData(Uri.parse("https://github.com/FReyesCastillo/eva02_stgocentro_freyes"));
         startActivity(i);
     }
 
