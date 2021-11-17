@@ -27,7 +27,7 @@ public class Redes_act extends AppCompatActivity {
     public void Playstore(View View){
 
         Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse("https://play.google.com/store/apps?hl=es_419&gl=US"));
+        i.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.genericapp.eva02_freyes"));
         startActivity(i);
     }
 

@@ -32,13 +32,11 @@ public class Sqlite_act extends AppCompatActivity {
         //Obtengo base de datos
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,"generic",null,1);
         SQLiteDatabase db = admin.getWritableDatabase(); // Permite sobreescribir en base de datos.
-
         String codigoProducto = codigo.getText().toString();
         String nombreProducto = nombre.getText().toString();
         String precioProducto = precio.getText().toString();
 
         if(!codigoProducto.isEmpty() && !nombreProducto.isEmpty() && !precioProducto.isEmpty()){
-
             //Guardar datos
             ContentValues cont = new ContentValues(); //Para contener valores
             cont.put("codigo_producto",codigoProducto);
@@ -49,7 +47,6 @@ public class Sqlite_act extends AppCompatActivity {
             db.close();
             Clean();
             Toast.makeText(getBaseContext(),"Has guardado un producto", Toast.LENGTH_SHORT).show();
-
         }
         else{
             Toast.makeText(getBaseContext(),"Los campos no pueden estar vacios", Toast.LENGTH_SHORT).show();

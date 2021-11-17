@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
         @Override // encagado de procesar en segundo plano la tarea pesada
         protected String doInBackground(String... strings) {
 
-
             try {
                 for(int i = 0; i<= 10; i++){
                     Thread.sleep(500);
@@ -88,13 +87,9 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     Toast.makeText(getBaseContext(), "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
-
                 }
             }
-
-
             }
-
         }
     }
 

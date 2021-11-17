@@ -6,7 +6,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.eva02_freyes"
+        applicationId "com.genericapp.eva02_freyes"
         minSdk 21
         targetSdk 31
         versionCode 1

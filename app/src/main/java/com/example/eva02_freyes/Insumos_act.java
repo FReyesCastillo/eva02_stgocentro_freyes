@@ -22,40 +22,27 @@ public class Insumos_act extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_insumos);
-
         insumos = findViewById(R.id.spInsumos);
         result = findViewById(R.id.txtRes);
         calificar = findViewById(R.id.ratingBar);
-
-        //Recibo extras
-
-        Bundle bun = getIntent().getExtras();
+        Bundle bun = getIntent().getExtras(); //Recibo extras
         String[] listado = bun.getStringArray("insumos");
-
         ArrayAdapter adaptInsumos = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listado);
         insumos.setAdapter(adaptInsumos);
     }
 
     public void Calcular (View View){
-
         String opcion = insumos.getSelectedItem().toString(); // obtengo la selección del spinner en una variable.
         int resultado = 0;
         int precio = 0;
-
         for(int i = 0; i< opcion.length(); i++){
-
             if(opcion.equals(in.getInsumos()[i])){ // pregunto por la seleccion del spinner (index)
-
                 precio = in.getPrecios()[i]; // obtengo resultado del precio según índice
-
                 resultado = in.anadirAdicional(in.getPrecios()[i], 450); // obtengo regla adicional
                 calificar.setRating(i+1); // pinta las estrellas del rating bar
                 break;
             }
         }
-
         result.setText("La opción seleccionada es " + opcion +"\ncon un costo correspondiente a $" + precio + "\ny su precio total es $" + resultado);
-
-
     }
 }

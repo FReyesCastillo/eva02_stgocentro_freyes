@@ -15,18 +15,13 @@ public class Info_act extends AppCompatActivity {
         setContentView(R.layout.activity_info);
     }
 
-    //Intents Implicitos...
-
+    //Intents Implicitos
     public void Marcar(View View){
-
         Intent i = new Intent(Intent.ACTION_DIAL); // accion para marcado telefonico
         i.setData(Uri.parse("tel:"+"900112233")); // colocamos el número a marcar
         startActivity(i);
-
     }
-
     //Intent Explicito
-
     public void Maps(View View){
         Intent i = new Intent(this, Map_act.class);
         startActivity(i);
